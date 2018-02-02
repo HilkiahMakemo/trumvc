@@ -1,0 +1,16 @@
+{
+    "name": "trumvc/trumvc",
+    "description": "The real True PHP Model-View-Controller Framework",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hilkiah Makemo",
+            "email": "hilkiah.makemo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "trumvc/trumvc": "dev-master"
+    }
+}
