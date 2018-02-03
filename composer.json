@@ -16,7 +16,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/HilkiahMakemo/trumvc-framework.git"
+            "url": "git@github.com:HilkiahMakemo/trumvc-framework.git"
         }
     ]
 }
