@@ -1,4 +1,5 @@
 <?php
 
+$App =  TruMVC\Core\Application::instance();
 
-return TruMVC\Core\Application::instance();
+return $App;

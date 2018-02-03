@@ -1,6 +1,6 @@
 <?php
 
-TruMVC\Core\Application::instance()
+$App = TruMVC\Core\Application::instance()
 
 
 ->set('blueprint', function(){
@@ -9,9 +9,15 @@ TruMVC\Core\Application::instance()
 })
 
 
+->set('config', function($app){
+    $configs = $app->get('blueprint')->configs;
+    return new TruMVC\Core\Configurator($configs);
+})
+
+
 ->set('routing', function($app){
    $routes = $app->get('blueprint')->routes;
-   return new TruMVC\Http\Routing($routes.DS);
+   return new TruMVC\Http\Routing( $routes );
 })
 
 
@@ -20,14 +26,22 @@ TruMVC\Core\Application::instance()
 })
 
 
-->set('response', function(){
-    return new TruMVC\Http\Response();
+->set('database', function($app){
+    $db = $app->get('config')->database;
+    return new TruMVC\Data\Database( $db );
+})
+
+->set('viewer', function($app){
+    $views = $app->get('config')->template;
+    return new TruMVC\View\Template( $views );
 })
 
 
-->set('config', function($app){
-    $configs = $app->get('blueprint')->configs;
-    return new TruMVC\Core\Configurator($configs);
+->set('response', function(){
+    return new TruMVC\Http\Response();
 });
 
-require SYSTEM . 'boot' . DS . 'autorun.php';
+print view('index', ['hilkdiah']);
+
+
+return require SYSTEM . 'boot' .DS. 'autorun.php';
