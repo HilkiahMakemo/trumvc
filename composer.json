@@ -11,6 +11,12 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "trumvc/trumvc": "dev-master"
-    }
+        
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/HilkiahMakemo/trumvc-framework.git"
+        }
+    ]
 }
