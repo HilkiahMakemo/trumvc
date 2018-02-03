@@ -20,8 +20,9 @@ $APP->set('blueprint', function(){
     return new TruMVC\Http\Response();
 
 })
-->set('config', function(){
-    return 'Makemo';
+->set('config', function($app){
+    $configs = $app->get('blueprint')->configs;
+    return new TruMVC\Core\Configurator($configs);
 
 })
 ->set('hilkiah', function(){
@@ -32,6 +33,6 @@ $APP->set('blueprint', function(){
     return 'Makemo';
 });
 
-dump($APP->get('routing'));
+dump($APP->get('blueprint'));
 
 return $APP;

@@ -9,14 +9,20 @@
             "email": "hilkiah.makemo@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "trumvc/framework": "dev-master"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0",
+        "maximebf/debugbar": "^1.15",
+        "phpunit/phpunit": "^7.0@dev"
     },
     "repositories": [
         {
             "type": "vcs",
             "url": "git@github.com:HilkiahMakemo/trumvc-framework.git"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
