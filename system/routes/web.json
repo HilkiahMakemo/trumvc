@@ -1,0 +1,5 @@
+{
+    "index": {
+        "method": "get", "group": "admin", "class": ["IndexController", "index"]
+    }
+}

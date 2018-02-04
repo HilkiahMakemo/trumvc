@@ -23,7 +23,7 @@ require_once VENDOR . 'autoload.php';
  ********************************************************************
  * 
  */
-$APP = require SYSTEM . 'init.php';
+$APP = require SYSTEM . 'boot' .DS. 'init.php';
 
 /**
  ********************************************************************
