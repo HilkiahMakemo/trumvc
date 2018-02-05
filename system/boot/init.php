@@ -41,7 +41,9 @@ $App = TruMVC\Core\Application::instance()
     return new TruMVC\Http\Response();
 });
 
-print view('index', ['hilkdiah']);
+// print view('index', ['hilkdiah']);
+
+dump($App->get('routing')->dispatch());
 
 
 return require SYSTEM . 'boot' .DS. 'autorun.php';

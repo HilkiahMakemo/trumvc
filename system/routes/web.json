@@ -1,5 +1,12 @@
 {
-    "index": {
-        "method": "get", "group": "admin", "class": ["IndexController", "index"]
+    "/index": {
+        "method": "get",
+        "group": "admin",
+        "class": ["Site\\IndexController", "index"]
+    },
+    "/admin": {
+        "method": "get",
+        "group": "admin",
+        "class": ["CMS\\AdminController", "index"]
     }
 }
